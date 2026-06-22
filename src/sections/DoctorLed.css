@@ -1,0 +1,141 @@
+.doctor-led {
+  display: flex;
+  width: 100%;
+  min-height: 520px;
+  box-sizing: border-box;
+}
+
+.doctor-led__left {
+  flex: 1;
+  background-color: #F0F7FF; /* Premium light-blue tint */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5rem 4rem 5rem calc((100vw - 1250px) / 2 + 2rem);
+  box-sizing: border-box;
+}
+
+.doctor-led__content {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.doctor-led__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  color: #181C1C;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.doctor-led__text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #181C1C;
+  line-height: 1.6;
+  margin: 0 0 2.5rem 0;
+}
+
+.doctor-led__btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #8F62D4; /* Brand purple */
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2.25rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 14px rgba(143, 98, 212, 0.25);
+  box-sizing: border-box;
+}
+
+.doctor-led__btn:hover {
+  background-color: #7b4fbc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(143, 98, 212, 0.35);
+}
+
+.doctor-led__btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(143, 98, 212, 0.25);
+}
+
+.doctor-led__right {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+}
+
+.doctor-led__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsiveness */
+@media (max-width: 1250px) {
+  .doctor-led__left {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .doctor-led {
+    flex-direction: column;
+  }
+
+  .doctor-led__left {
+    padding: 4rem 2rem;
+    justify-content: center;
+  }
+
+  .doctor-led__content {
+    max-width: 100%;
+  }
+
+  .doctor-led__heading {
+    font-size: 2.25rem;
+    text-align: center;
+  }
+
+  .doctor-led__text {
+    text-align: center;
+  }
+
+  .doctor-led__btn {
+    align-self: center;
+  }
+
+  .doctor-led__right {
+    min-height: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .doctor-led__heading {
+    font-size: 1.85rem;
+  }
+
+  .doctor-led__text {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .doctor-led__btn {
+    width: 100%;
+    padding: 0.9rem 2rem;
+  }
+}

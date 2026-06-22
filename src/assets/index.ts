@@ -3,5 +3,6 @@ import heroSecGirl from './heroSecGirl.png';
 import reactLogo from './react.svg';
 import promoSecImage from './promoSecImage.png';
 import airpodsImage from './airpodsImage.png';
+import doctorImage from './doctorImage.png';
 
-export { logo, heroSecGirl, reactLogo, promoSecImage, airpodsImage };
+export { logo, heroSecGirl, reactLogo, promoSecImage, airpodsImage, doctorImage };

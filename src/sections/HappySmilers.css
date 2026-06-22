@@ -1,0 +1,256 @@
+.smilers-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.smilers-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.smilers-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #181C1C;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Loading Spinner */
+.smilers-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  color: #768989;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #F3F1F6;
+  border-top: 4px solid #8F62D4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* List / Grid */
+.smilers-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Card - Less rounded and set to B166D4 */
+.smiler-card {
+  background-color: #B166D4;
+  /* Brand orchid purple */
+  border-radius: 10px;
+  /* Sharper, cleaner border-radius */
+  padding: 1.5rem 1.25rem;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(177, 102, 212, 0.08);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.smiler-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(177, 102, 212, 0.2);
+}
+
+/* Header logo */
+.smiler-card-header {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 3;
+  /* Placed above the expanding hover image */
+}
+
+.smiler-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.smiler-logo-main {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.smiler-logo-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.45rem;
+  color: #ffffff;
+  opacity: 0.85;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+/* Image Container - position absolutely to transition size on hover */
+.smiler-image-container {
+  position: absolute;
+  top: 3.5rem;
+  /* Below header */
+  bottom: 5.5rem;
+  /* Above footer */
+  left: 1.25rem;
+  right: 1.25rem;
+  border-radius: 8px;
+  /* Slightly sharper radius */
+  overflow: hidden;
+  background-color: #EFEBF4;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.smiler-card:hover .smiler-image-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  /* Fills full card border radius */
+}
+
+.smiler-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.smiler-card:hover .smiler-avatar {
+  filter: grayscale(100%) contrast(1.05);
+  /* Shifts image to premium black and white */
+}
+
+/* Overlay Quotes with smooth fade out */
+.smiler-quote {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  z-index: 2;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.smiler-card:hover .smiler-quote {
+  opacity: 0;
+  transform: scale(0.7);
+  /* Smoothly shrinks and disappears */
+}
+
+.smiler-quote--top {
+  top: 10px;
+  left: 10px;
+}
+
+.smiler-quote--bottom {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+.quote-icon {
+  width: 12px;
+  height: 12px;
+  fill: #B166D4;
+}
+
+/* Footer details */
+.smiler-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  z-index: 3;
+  /* Placed above the expanding hover image */
+}
+
+.smiler-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.smiler-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #ffffff;
+  opacity: 0.95;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Grid and Carousel styling */
+@media (max-width: 1024px) {
+  .smilers-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .smilers-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 1rem 0;
+    gap: 1.25rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .smiler-card {
+    flex: 0 0 240px;
+    height: 385px;
+    scroll-snap-align: start;
+  }
+
+  .smiler-image-container {
+    bottom: 5.25rem;
+  }
+}

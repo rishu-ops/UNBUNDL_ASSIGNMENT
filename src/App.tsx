@@ -2,8 +2,12 @@ import Header from './components/Header'
 import Marquee from './components/Marquee'
 import Hero from './sections/Hero'
 import BookScanForm from './sections/BookScanForm'
-import { PromoBanner } from './components/PromoBanner';
-import { AlignerSection } from './sections/AlignerSection';
+import { PromoBanner } from './components/PromoBanner'
+import AlignerSection from './sections/AlignerSection'
+import HappySmilers from './sections/HappySmilers'
+import { ResultsGallery } from './sections/ResultsGallery'
+import SmileSteps from './sections/SmileSteps'
+import DoctorLed from './sections/DoctorLed'
 
 function App() {
   const promoText = (
@@ -51,6 +55,10 @@ function App() {
         }}
       />
       <AlignerSection />
+      <HappySmilers />
+      {/* <ResultsGallery /> */}
+      <SmileSteps />
+      <DoctorLed />
     </>
   )
 }

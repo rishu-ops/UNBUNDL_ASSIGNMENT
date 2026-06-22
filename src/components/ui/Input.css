@@ -15,7 +15,8 @@
 /* Outer bordered box */
 .ti-field {
     position: relative;
-    border: 1px solid #e4e4e7; /* zinc-200 */
+    border: 1px solid #e4e4e7;
+    /* zinc-200 */
     border-radius: 10px;
     background-color: #ffffff;
     transition: border-color 150ms ease, box-shadow 150ms ease;
@@ -23,11 +24,13 @@
 }
 
 .ti-field:hover {
-    border-color: #c7b9e5; /* soft brand hover color */
+    border-color: #c7b9e5;
+    /* soft brand hover color */
 }
 
 .ti-field--focused {
-    border-color: #8F62D4; /* Purple brand color */
+    border-color: #8F62D4;
+    /* Purple brand color */
     box-shadow: 0 0 0 2px rgba(143, 98, 212, 0.12);
 }
 
@@ -52,7 +55,8 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 15px;
-    color: #768989; /* Slate grey label */
+    color: #768989;
+    /* Slate grey label */
     pointer-events: none;
     user-select: none;
     transform-origin: left top;
@@ -67,7 +71,8 @@
 .ti-label--floated {
     top: 0;
     transform: translateY(-50%) scale(0.85);
-    background-color: #ffffff; /* Covers the border line behind the label */
+    background-color: #ffffff;
+    /* Covers the border line behind the label */
     color: #768989;
 }
 
@@ -114,7 +119,7 @@
 }
 
 .ti-input::placeholder {
-    color: transparent;
+    color: #a1a1aa;
 }
 
 .ti-field--focused .ti-input::placeholder {
