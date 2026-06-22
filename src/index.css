@@ -1,18 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ── Design Tokens ───────────────────────────────────────── */
 :root {
+  /* Font */
   font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color: #1a1a1a;
-  background-color: #ffffff;
-
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Brand colours */
+  --color-brand:        #8F62D4;
+  --color-brand-dark:   #7a4fc2;
+  --color-brand-light:  #C7B9E5;
+  --color-text-primary: #181C1C;
+  --color-text-muted:   #768989;
+  --color-bg-white:     #ffffff;
+  --color-bg-blue:      #EEF4FC;
+  --color-bg-soft:      #F8F9FC;
+
+  /* Spacing scale */
+  --section-padding-y:  5rem;
+  --section-padding-y-sm: 3rem;
+
+  /* Typography */
+  --heading-size:    2.25rem;
+  --subheading-size: 20px;
+  --body-size:       16px;
+  --small-size:      0.875rem;
+
+  color: #1a1a1a;
+  background-color: #ffffff;
 }
 
+/* ── Reset ───────────────────────────────────────────────── */
 body {
   margin: 0;
   min-width: 320px;
@@ -21,17 +43,82 @@ body {
   color: #1a1a1a;
 }
 
-h1 {
+/* ── Global heading defaults ─────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  /* ExtraBold */
   font-style: normal;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 800;
   font-size: 40px;
-  line-height: 130%;
+  line-height: 1.3;
   letter-spacing: 0;
 }
 
-/* Container with max width */
+/* ── Shared section heading ──────────────────────────────── */
+/* Apply .section-heading on any h2 that is a section title  */
+.section-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: var(--heading-size);
+  line-height: 1.25;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* ── Shared section sub-heading (feature titles, card titles) */
+.section-subheading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: var(--subheading-size);
+  line-height: 1.3;
+  color: var(--color-text-primary);
+}
+
+/* ── Shared body copy ────────────────────────────────────── */
+.section-body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: var(--body-size);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+/* ── Shared primary button ───────────────────────────────── */
+.btn-primary {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: var(--color-brand);
+  border: none;
+  border-radius: 10px;
+  padding: 0 2.5rem;
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 14px rgba(143, 98, 212, 0.25);
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-dark);
+  box-shadow: 0 8px 24px rgba(143, 98, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 14px rgba(143, 98, 212, 0.25);
+}
+
+/* ── Container ───────────────────────────────────────────── */
 .container {
   max-width: 1250px;
   margin: 0 auto;
