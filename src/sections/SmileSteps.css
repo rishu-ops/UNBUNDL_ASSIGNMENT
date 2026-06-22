@@ -65,7 +65,7 @@
   border-radius: 50%;
   background-color: rgba(143, 98, 212, 0.08);
   /* Brand purple transparent fill */
-  border: 3px solid #C7E0F2;
+  border: 4px solid #C7E0F2;
   /* Brand purple solid stroke */
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@
   max-width: 320px;
   aspect-ratio: 3 / 4;
   /* Portrait ratio matching screenshot */
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(143, 98, 212, 0.12);
   border: 4px solid #8F62D4;

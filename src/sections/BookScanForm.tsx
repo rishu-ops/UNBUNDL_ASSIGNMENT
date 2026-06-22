@@ -1,17 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Input from '../components/ui/Input';
 import './BookScanForm.css';
 
 const BookScanForm = () => {
-  const [hasGaps, setHasGaps] = useState<string | null>('yes'); // Default yes as in screenshot
-  const [fullName, setFullName] = useState(''); // Pre-filled name like in screenshot
+  const [hasGaps, setHasGaps] = useState<string | null>('yes');
+  const [fullName, setFullName] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
-  const [consent, setConsent] = useState(true); // Default consented like in screenshot
+  const [consent, setConsent] = useState(true);
+  const [submitted, setSubmitted] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+
+  // Button is enabled only when name and mobile are non-empty
+  const isFormValid =
+    fullName.trim().length > 0 && mobileNumber.trim().length >= 10;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ hasGaps, fullName, mobileNumber, consent });
+    if (!isFormValid) return;
+    setSubmitted(true);
+    setShowToast(true);
+
+    // Reset form
+    setFullName('');
+    setMobileNumber('');
+    setHasGaps('yes');
+    setConsent(true);
   };
+
+  // Auto-dismiss toast after 4 seconds
+  useEffect(() => {
+    if (!showToast) return;
+    const timer = setTimeout(() => setShowToast(false), 4000);
+    return () => clearTimeout(timer);
+  }, [showToast]);
 
   return (
     <section className="scan-form-section">
@@ -66,7 +87,11 @@ const BookScanForm = () => {
               />
             </div>
 
-            <button type="submit" className="submit-scan-btn">
+            <button
+              type="submit"
+              className={`submit-scan-btn ${!isFormValid ? 'submit-scan-btn--disabled' : ''}`}
+              disabled={!isFormValid}
+            >
               Book a Free Scan
             </button>
           </div>
@@ -85,6 +110,33 @@ const BookScanForm = () => {
             </label>
           </div>
         </form>
+      </div>
+
+      {/* Success Toast */}
+      <div className={`scan-toast ${showToast ? 'scan-toast--visible' : ''}`}>
+        <div className="scan-toast__icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#8F62D4" />
+            <path
+              d="M7 12.5l3.5 3.5 6.5-7"
+              stroke="#ffffff"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+        <div className="scan-toast__body">
+          <p className="scan-toast__title">Form Submitted Successfully!</p>
+          <p className="scan-toast__msg">We'll get in touch with you shortly to confirm your free scan.</p>
+        </div>
+        <button
+          className="scan-toast__close"
+          onClick={() => setShowToast(false)}
+          aria-label="Close"
+        >
+          ×
+        </button>
       </div>
     </section>
   );

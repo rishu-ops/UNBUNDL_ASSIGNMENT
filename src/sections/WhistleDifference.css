@@ -104,7 +104,8 @@
   background-color: #ffffff;
   transform-style: preserve-3d;
   perspective: 1000px;
-  overflow: visible !important; /* Prevents clipping of the 3D pop effect */
+  overflow: visible !important;
+  /* Prevents clipping of the 3D pop effect */
 }
 
 .difference-main-img {
@@ -112,8 +113,10 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 16px; /* Matches card rounding directly */
-  transform: translateZ(30px); /* Aceternity-style 3D floating effect */
+  border-radius: 16px;
+  /* Matches card rounding directly */
+  transform: translateZ(30px);
+  /* Aceternity-style 3D floating effect */
   transition: transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 

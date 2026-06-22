@@ -1,5 +1,5 @@
 .smilers-section {
-  padding: 5rem 0;
+  padding: 3rem 0 5rem;
   background-color: #ffffff;
   width: 100%;
 }
@@ -157,17 +157,14 @@
   /* Shifts image to premium black and white */
 }
 
-/* Overlay Quotes with smooth fade out */
+/* Overlay Quotes — floating white icons, no box */
 .smiler-quote {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: #ffffff;
-  border-radius: 6px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
   z-index: 2;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -175,7 +172,6 @@
 .smiler-card:hover .smiler-quote {
   opacity: 0;
   transform: scale(0.7);
-  /* Smoothly shrinks and disappears */
 }
 
 .smiler-quote--top {
@@ -183,16 +179,30 @@
   left: 10px;
 }
 
+/* Bottom quote — larger, closing-quote path faces correct direction */
 .smiler-quote--bottom {
   bottom: 10px;
   right: 10px;
-  transform: rotate(180deg);
+  width: 56px;
+  height: 56px;
 }
 
+.smiler-card:hover .smiler-quote--bottom {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+/* Top icon */
 .quote-icon {
-  width: 12px;
-  height: 12px;
-  fill: #B166D4;
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+/* Bottom icon — noticeably bigger */
+.smiler-quote--bottom .quote-icon {
+  width: 36px;
+  height: 36px;
 }
 
 /* Footer details */
