@@ -27,26 +27,30 @@
 .call-btn {
   background-color: #8F62D4;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.75rem 1.75rem;
+  width: 44px;
+  height: 44px;
   border: none;
-  border-radius: 9999px;
-  /* Fully rounded pill */
+  border-radius: 50%;
+  /* Fully rounded circle */
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .call-btn:hover {
   background-color: #7a4ebc;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(143, 98, 212, 0.3);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(143, 98, 212, 0.35);
 }
 
 .call-btn:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+}
+
+.call-icon-svg {
+  display: block;
 }

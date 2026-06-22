@@ -1,5 +1,5 @@
 .smilers-section {
-  padding: 4rem 0;
+  padding: 5rem 0;
   background-color: #ffffff;
   width: 100%;
 }
@@ -12,10 +12,11 @@
 .smilers-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: #181C1C;
   text-align: center;
   margin-bottom: 3rem;
+  letter-spacing: -0.02em;
 }
 
 /* Loading Spinner */
@@ -235,6 +236,15 @@
 }
 
 @media (max-width: 768px) {
+  .smilers-section {
+    padding: 3rem 0;
+  }
+
+  .smilers-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
   .smilers-list {
     display: flex;
     overflow-x: auto;

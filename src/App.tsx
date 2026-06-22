@@ -4,10 +4,13 @@ import Hero from './sections/Hero'
 import BookScanForm from './sections/BookScanForm'
 import { PromoBanner } from './components/PromoBanner'
 import AlignerSection from './sections/AlignerSection'
+import WhistleDifference from './sections/WhistleDifference'
 import HappySmilers from './sections/HappySmilers'
-import { ResultsGallery } from './sections/ResultsGallery'
 import SmileSteps from './sections/SmileSteps'
 import DoctorLed from './sections/DoctorLed'
+import ComparisonTable from './sections/ComparisonTable'
+import FaqSection from './sections/FaqSection'
+import Footer from './components/Footer'
 
 function App() {
   const promoText = (
@@ -55,10 +58,13 @@ function App() {
         }}
       />
       <AlignerSection />
+      <WhistleDifference />
       <HappySmilers />
-      {/* <ResultsGallery /> */}
       <SmileSteps />
       <DoctorLed />
+      <ComparisonTable />
+      <FaqSection />
+      <Footer />
     </>
   )
 }

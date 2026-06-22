@@ -1,0 +1,158 @@
+.difference-section {
+  padding: 5rem 0;
+  background-color: #EEF4FC;
+  /* Baby blue background tint */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.difference-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.difference-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* Card Styling */
+.difference-card {
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Left Card Details */
+.difference-card--left {
+  background-color: #ffffff;
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.difference-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #181C1C;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.02em;
+}
+
+.difference-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Feature Item Row */
+.diff-feature-item {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+.diff-icon-container {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diff-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.diff-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.diff-feature-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #181C1C;
+  margin: 0 0 0.4rem 0;
+}
+
+.diff-feature-desc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #181C1C;
+  /* Cohesive muted label grey */
+  margin: 0;
+}
+
+/* Right Card Image */
+.difference-card--right {
+  display: flex;
+  background-color: #ffffff;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: visible !important; /* Prevents clipping of the 3D pop effect */
+}
+
+.difference-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px; /* Matches card rounding directly */
+  transform: translateZ(30px); /* Aceternity-style 3D floating effect */
+  transition: transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .difference-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .difference-card--left {
+    padding: 3rem 2rem;
+  }
+
+  .difference-card--right {
+    min-height: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .difference-title {
+    font-size: 1.85rem;
+    margin-bottom: 2.25rem;
+    text-align: center;
+  }
+
+  .difference-features-list {
+    gap: 2rem;
+  }
+
+  .diff-feature-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .difference-card--right {
+    min-height: 300px;
+  }
+}

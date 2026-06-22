@@ -1,7 +1,7 @@
 .steps-section {
   background-color: #EEF4FC;
   /* Baby blue background tint */
-  padding: 4rem 0;
+  padding: 5rem 0;
   width: 100%;
   box-sizing: border-box;
 }
@@ -37,7 +37,7 @@
 .steps-heading {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 1.25;
   color: #181C1C;
   margin: 0 0 3rem 0;
@@ -129,6 +129,10 @@
 
 /* Responsiveness */
 @media (max-width: 992px) {
+  .steps-section {
+    padding: 3rem 0;
+  }
+
   .steps-card {
     flex-direction: column;
     padding: 2.5rem 2rem;

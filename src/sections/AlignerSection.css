@@ -2,13 +2,11 @@
     width: 100%;
     background-color: #F8F9FC;
     /* Very soft premium background */
-    padding: 4rem 0;
+    padding: 5rem 0;
     box-sizing: border-box;
 }
 
 .aligner-section__container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -25,11 +23,12 @@
 .aligner-section__heading {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 2.25rem;
+    line-height: 1.25;
     color: #181C1C;
     margin: 0 0 1.5rem 0;
     text-align: left;
+    letter-spacing: -0.02em;
 }
 
 .aligner-section__description-wrapper {
@@ -41,8 +40,8 @@
 .aligner-section__description {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: .9rem;
-    line-height: 1.5;
+    font-size: 1.05rem;
+    line-height: 1.6;
     color: #181C1C;
     /* Cohesive grey color */
     margin: 0;
@@ -201,7 +200,7 @@
 }
 
 .aligner-section__cta:hover .aligner-section__arrow {
-    transform: translateX(6px);
+    transform: translateX(4px);
 }
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
