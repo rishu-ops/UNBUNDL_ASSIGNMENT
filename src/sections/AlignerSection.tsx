@@ -1,7 +1,8 @@
 import React from 'react';
+import { airpodsImage } from '../assets';
 import './AlignerSection.css';
 
-interface AlignerSectionProps {
+export interface AlignerSectionProps {
     heading?: string;
     descriptions?: string[];
     productTitle?: string;
@@ -22,13 +23,12 @@ export const AlignerSection: React.FC<AlignerSectionProps> = ({
     originalPrice = "₹84,000",
     currentPrice = "₹47,999",
     features = ["Offer valid for a limited time", "Easy financing options"],
-    // Placeholder image mimicking the purple case in image_800cc3.png
-    productImageUrl = "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=250&q=80",
+    productImageUrl = airpodsImage,
     onLearnMore
 }) => {
     return (
         <section className="aligner-section">
-            <div className="aligner-section__container">
+            <div className="aligner-section__container container">
 
                 {/* Left Informational Column */}
                 <div className="aligner-section__info">
@@ -81,3 +81,5 @@ export const AlignerSection: React.FC<AlignerSectionProps> = ({
         </section>
     );
 };
+
+export default AlignerSection;

@@ -3,6 +3,7 @@ import Marquee from './components/Marquee'
 import Hero from './sections/Hero'
 import BookScanForm from './sections/BookScanForm'
 import { PromoBanner } from './components/PromoBanner';
+import { AlignerSection } from './sections/AlignerSection';
 
 function App() {
   const promoText = (
@@ -49,6 +50,7 @@ function App() {
           letterSpacing: '0.02em',
         }}
       />
+      <AlignerSection />
     </>
   )
 }
