@@ -7,7 +7,6 @@ const BookScanForm = () => {
   const [fullName, setFullName] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
   const [consent, setConsent] = useState(true);
-  const [submitted, setSubmitted] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
   // Button is enabled only when name and mobile are non-empty
@@ -17,7 +16,6 @@ const BookScanForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!isFormValid) return;
-    setSubmitted(true);
     setShowToast(true);
 
     // Reset form
