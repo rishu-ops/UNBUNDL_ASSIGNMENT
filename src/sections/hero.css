@@ -62,18 +62,20 @@
 /* Responsiveness */
 @media (max-width: 992px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        text-align: start;
     }
 
     .hero-subtitle {
-        font-size: 20px;
+        font-size: 19px;
+        text-align: start
     }
 }
 
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
-        padding: 2rem 2rem 0 2rem;
+        padding: 2rem 1.5rem 0 1.5rem;
         text-align: center;
     }
 
@@ -83,8 +85,13 @@
         padding-bottom: 2rem;
     }
 
+    .hero-subtitle {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
     .hero-title {
-        font-size: 2.25rem;
+        font-size: 1.85rem;
     }
 
     .hero-subtitle {
@@ -98,5 +105,24 @@
 
     .hero-image {
         max-height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 1.5rem 1rem 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.65rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        max-height: 230px;
     }
 }

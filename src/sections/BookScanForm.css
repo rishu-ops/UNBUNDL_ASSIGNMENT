@@ -66,11 +66,11 @@
   border-color: #8F62D4;
 }
 
-.radio-label input:checked + .radio-circle {
+.radio-label input:checked+.radio-circle {
   border-color: #8F62D4;
 }
 
-.radio-label input:checked + .radio-circle::after {
+.radio-label input:checked+.radio-circle::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -169,7 +169,8 @@
 .checkmark {
   width: 18px;
   height: 18px;
-  border: 2px solid #C7B9E5; /* Lavender checkbox outline */
+  border: 2px solid #C7B9E5;
+  /* Lavender checkbox outline */
   border-radius: 4px;
   display: inline-block;
   flex-shrink: 0;
@@ -183,12 +184,12 @@
   border-color: #8F62D4;
 }
 
-.checkbox-container input:checked + .checkmark {
+.checkbox-container input:checked+.checkmark {
   background-color: #8F62D4;
   border-color: #8F62D4;
 }
 
-.checkbox-container input:checked + .checkmark::after {
+.checkbox-container input:checked+.checkmark::after {
   content: "";
   position: absolute;
   left: 4px;
@@ -222,14 +223,39 @@
     flex-direction: column;
     gap: 1.25rem;
   }
-  
+
+  .input-wrapper {
+    width: 100%;
+  }
+
   .submit-scan-btn {
     width: 100%;
     min-height: 52px;
   }
-  
+
   .radio-group {
     gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scan-form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .radio-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .radio-label {
+    font-size: 1rem;
+  }
+
+  .scan-form {
+    gap: 1.25rem;
   }
 }
 
@@ -255,7 +281,7 @@
   transform: translateY(20px) scale(0.96);
   pointer-events: none;
   transition: opacity 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
-              transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .scan-toast--visible {

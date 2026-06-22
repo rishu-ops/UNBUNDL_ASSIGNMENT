@@ -126,3 +126,58 @@ h1 {
   width: 100%;
   box-sizing: border-box;
 }
+
+/* ── Responsive Design Tokens ────────────────────────────── */
+@media (max-width: 992px) {
+  :root {
+    --heading-size:    2rem;
+    --section-padding-y: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --heading-size:    1.85rem;
+    --subheading-size: 18px;
+    --section-padding-y: 3rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .section-heading {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --heading-size:    1.6rem;
+    --subheading-size: 16px;
+    --body-size:       15px;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0 1.5rem;
+    min-height: 52px;
+    font-size: 0.95rem;
+  }
+}

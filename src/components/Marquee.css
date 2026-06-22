@@ -22,8 +22,10 @@
 .marquee-content {
   display: flex;
   align-items: center;
-  gap: 4rem; /* Gap between text elements */
-  padding-right: 4rem; /* Match the gap for seamless repetition */
+  gap: 4rem;
+  /* Gap between text elements */
+  padding-right: 4rem;
+  /* Match the gap for seamless repetition */
 }
 
 .marquee-item {
@@ -38,7 +40,56 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .marquee-container {
+    padding: 0.6rem 1rem;
+  }
+
+  /* Static (non-animated) marquee: allow wrapping */
+  .marquee-track:not(.animate) {
+    width: 100%;
+  }
+
+  .marquee-track:not(.animate) .marquee-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-right: 0;
+  }
+
+  .marquee-track:not(.animate) .marquee-item {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .marquee-item {
+    font-size: 0.85rem;
+  }
+
+  .marquee-content {
+    gap: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-container {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .marquee-item {
+    font-size: 0.78rem;
+  }
+
+  .marquee-content {
+    gap: 2rem;
+    padding-right: 2rem;
   }
 }

@@ -154,6 +154,10 @@
 
 /* Responsiveness */
 @media (max-width: 768px) {
+  .faq-section {
+    padding: 3rem 0;
+  }
+
   .faq-heading {
     font-size: 1.85rem;
     margin-bottom: 2.5rem;
@@ -170,5 +174,30 @@
   .faq-answer-text {
     font-size: 0.95rem;
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 2.5rem 0;
+  }
+
+  .faq-heading {
+    font-size: 1.55rem;
+    margin-bottom: 2rem;
+  }
+
+  .faq-question-btn {
+    padding: 1.25rem 0.25rem;
+  }
+
+  .faq-question-text {
+    font-size: 0.95rem;
+    padding-right: 1rem;
+  }
+
+  .faq-answer-text {
+    font-size: 0.9rem;
+    padding-bottom: 1.25rem;
   }
 }

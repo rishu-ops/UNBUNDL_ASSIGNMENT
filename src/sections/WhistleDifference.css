@@ -41,7 +41,7 @@
 
 .difference-title {
   font-weight: 800;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 1.25;
   color: #181C1C;
   margin: 0 0 2rem 0;
@@ -122,40 +122,110 @@
 
 /* Responsiveness */
 @media (max-width: 992px) {
+  .difference-section {
+    padding: 3.5rem 0;
+  }
+
   .difference-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .difference-card--left {
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem;
   }
 
   .difference-card--right {
-    min-height: 400px;
+    min-height: 320px;
     width: 100%;
   }
 }
 
 @media (max-width: 600px) {
+  .difference-section {
+    padding: 2rem 0;
+  }
+
   .difference-title {
-    font-size: 1.85rem;
-    margin-bottom: 2.25rem;
+    font-size: 1.45rem;
+    margin-bottom: 1.25rem;
     text-align: center;
+  }
+
+  .difference-card--left {
+    padding: 1.5rem 1.25rem;
   }
 
   .difference-features-list {
-    gap: 2rem;
+    gap: 1.25rem;
   }
 
   .diff-feature-item {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    gap: 1rem;
+    text-align: start;
+    gap: 0.85rem;
+  }
+
+  .diff-icon-container {
+    width: 42px;
+    height: 42px;
+  }
+
+  .diff-feature-title {
+    font-size: 15px;
+  }
+
+  .diff-feature-desc {
+    font-size: 13.5px;
+    line-height: 1.45;
   }
 
   .difference-card--right {
-    min-height: 300px;
+    min-height: 220px;
+  }
+
+  .difference-main-img {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .difference-section {
+    padding: 1.5rem 0;
+  }
+
+  .difference-grid {
+    gap: 1rem;
+  }
+
+  .difference-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .difference-card--left {
+    padding: 1.25rem 1rem;
+  }
+
+  .difference-features-list {
+    gap: 1rem;
+  }
+
+  .diff-icon-container {
+    width: 36px;
+    height: 36px;
+  }
+
+  .diff-feature-title {
+    font-size: 14px;
+  }
+
+  .diff-feature-desc {
+    font-size: 13px;
+  }
+
+  .difference-card--right {
+    min-height: 180px;
   }
 }

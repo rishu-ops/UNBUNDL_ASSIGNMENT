@@ -161,3 +161,37 @@
     text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .steps-card {
+    padding: 1.75rem 1.25rem;
+    gap: 2rem;
+    border-radius: 16px;
+  }
+
+  .steps-heading {
+    font-size: 1.55rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .step-item {
+    gap: 1rem;
+  }
+
+  .step-number-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .step-title {
+    font-size: 1rem;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+  }
+
+  .video-wrapper {
+    max-width: 260px;
+  }
+}

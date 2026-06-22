@@ -217,7 +217,7 @@
 
     .aligner-section__container {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     .aligner-section__heading {
@@ -242,5 +242,42 @@
 
     .aligner-section__cta {
         align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .aligner-section {
+        padding: 2.5rem 0;
+    }
+
+    .aligner-section__heading {
+        font-size: 1.55rem;
+    }
+
+    .aligner-section__card {
+        padding: 1.25rem;
+    }
+
+    .aligner-section__card-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aligner-section__image-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .aligner-section__product-title {
+        font-size: 20px;
+    }
+
+    .aligner-section__price-current {
+        font-size: 24px;
+    }
+
+    .aligner-section__description {
+        font-size: 0.95rem;
     }
 }

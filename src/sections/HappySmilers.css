@@ -70,7 +70,7 @@
   justify-content: space-between;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(177, 102, 212, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(177, 102, 212, 0.15);
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-sizing: border-box;
   cursor: pointer;
@@ -78,7 +78,7 @@
 
 .smiler-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(177, 102, 212, 0.2);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.16), 0 8px 20px rgba(177, 102, 212, 0.25);
 }
 
 /* Header logo */
@@ -252,10 +252,15 @@
   .smilers-list {
     display: flex;
     overflow-x: auto;
-    padding: 1rem 0;
+    padding: 1rem 0 1.5rem;
     gap: 1.25rem;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .smilers-list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
   }
 
   .smiler-card {
@@ -266,5 +271,24 @@
 
   .smiler-image-container {
     bottom: 5.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .smilers-title {
+    font-size: 1.55rem;
+  }
+
+  .smiler-card {
+    flex: 0 0 200px;
+    height: 340px;
+  }
+
+  .smiler-tag {
+    font-size: 0.85rem;
+  }
+
+  .smiler-name {
+    font-size: 0.7rem;
   }
 }
