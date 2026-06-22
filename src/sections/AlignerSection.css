@@ -1,0 +1,225 @@
+/* Imports for custom Google fonts specified in your requirements */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.aligner-section {
+    width: 100%;
+    background-color: #f0f7fe;
+    /* Light tint wrapper background matching design */
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+}
+
+.aligner-section__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+/* --- LEFT SIDE COLUMN --- */
+.aligner-section__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 0;
+}
+
+.aligner-section__heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    /* ExtraBold */
+    font-size: 28px;
+    line-height: 130%;
+    color: #2F3737;
+    /* Heading text color */
+    letter-spacing: 0%;
+    margin: 0 0 2rem 0;
+    text-align: left;
+    /* Changed from text-align: center to match image left layout natively */
+}
+
+.aligner-section__description-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.aligner-section__description {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    /* Regular */
+    font-size: 16px;
+    line-height: 22px;
+    color: #181C1C;
+    /* Description text color */
+    letter-spacing: 0%;
+    margin: 0;
+    /* vertical-align: middle implementation logic on block text items */
+    display: inline-block;
+}
+
+/* --- RIGHT SIDE PRICING CARD --- */
+.aligner-section__card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px dashed #93c5fd;
+    /* Subtle border structure visual match */
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.aligner-section__card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.aligner-section__product-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: #2F3737;
+    margin: 0 0 1.5rem 0;
+}
+
+.aligner-section__price-old {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #64748b;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.aligner-section__price-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.aligner-section__price-label {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 16px;
+    color: #181C1C;
+}
+
+.aligner-section__price-current {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: #7c5cbd;
+    /* Theme purple accent colors */
+}
+
+.aligner-section__price-tax {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px;
+    color: #94a3b8;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.aligner-section__image-container {
+    width: 140px;
+    height: 140px;
+}
+
+.aligner-section__product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    /* Rounded format mirroring the case layout */
+}
+
+.aligner-section__card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.aligner-section__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.aligner-section__feature-item {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 14px;
+    color: #181C1C;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.aligner-section__checkmark {
+    color: #10b981;
+    /* Green success indicator icon wrapper */
+    font-weight: bold;
+    background-color: #d1fae5;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+.aligner-section__cta {
+    background: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #7c5cbd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    transition: transform 0.2s ease;
+}
+
+.aligner-section__cta:hover {
+    opacity: 0.8;
+}
+
+.aligner-section__arrow {
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.aligner-section__cta:hover .aligner-section__arrow {
+    transform: translateX(4px);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 900px) {
+    .aligner-section__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .aligner-section__card-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .aligner-section__cta {
+        align-self: flex-end;
+    }
+}

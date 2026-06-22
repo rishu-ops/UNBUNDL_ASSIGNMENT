@@ -51,7 +51,7 @@ const BookScanForm = () => {
                 label="Full Name" 
                 required
                 value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFullName(e.target.value)}
               />
             </div>
             
@@ -60,7 +60,7 @@ const BookScanForm = () => {
                 label="Mobile number" 
                 required
                 value={mobileNumber}
-                onChange={(e) => setMobileNumber(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMobileNumber(e.target.value)}
                 startAdornment={<span className="phone-prefix">+91</span>}
                 placeholder="Mobile number"
               />
@@ -76,7 +76,7 @@ const BookScanForm = () => {
               <input 
                 type="checkbox" 
                 checked={consent} 
-                onChange={(e) => setConsent(e.target.checked)} 
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConsent(e.target.checked)} 
               />
               <span className="checkmark"></span>
               <span className="consent-text">

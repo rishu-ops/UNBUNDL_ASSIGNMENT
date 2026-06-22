@@ -1,0 +1,112 @@
+.promo-banner-wrapper {
+    padding: 1.5rem 0;
+    box-sizing: border-box;
+}
+
+.promo-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    background-color: #F4F6FB;
+    /* Premium light blue-grey background */
+    border-radius: 24px;
+    padding: 2.5rem 3.5rem;
+    max-width: 1100px;
+    margin: 1rem auto;
+    box-sizing: border-box;
+}
+
+.promo-banner__content {
+    flex: 1;
+}
+
+.promo-banner__text {
+    font-family: 'Montserrat', sans-serif;
+    color: #181C1C;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.promo-banner__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.25rem;
+    min-width: 180px;
+    box-sizing: border-box;
+}
+
+.promo-banner__logo-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.promo-banner__logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.promo-banner__link {
+    background: none;
+    border: none;
+    color: #8F62D4;
+    /* Brand purple */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.promo-banner__link:hover {
+    color: #7a4ebc;
+}
+
+.promo-banner__icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    stroke: currentColor;
+}
+
+.promo-banner__link:hover .promo-banner__icon {
+    transform: translateY(4px);
+    /* Interactive micro-animation */
+}
+
+.promo-banner__link:active .promo-banner__icon {
+    transform: translateY(1px);
+}
+
+/* Responsive breakpoint for tablets and mobiles */
+@media (max-width: 768px) {
+    .promo-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .promo-banner__text {
+        font-size: 1.25rem;
+    }
+
+    .promo-banner__actions {
+        align-items: center;
+        width: 100%;
+    }
+}
