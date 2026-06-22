@@ -1,0 +1,93 @@
+import React, { useState } from 'react';
+import Input from '../components/ui/Input';
+import './BookScanForm.css';
+
+const BookScanForm = () => {
+  const [hasGaps, setHasGaps] = useState<string | null>('yes'); // Default yes as in screenshot
+  const [fullName, setFullName] = useState('Ajay Kumar'); // Pre-filled name like in screenshot
+  const [mobileNumber, setMobileNumber] = useState('');
+  const [consent, setConsent] = useState(true); // Default consented like in screenshot
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log({ hasGaps, fullName, mobileNumber, consent });
+  };
+
+  return (
+    <section className="scan-form-section">
+      <div className="scan-form-container container">
+        <h2 className="scan-form-title">Do you have Teeth Gaps or Crooked Teeth?</h2>
+        
+        <form onSubmit={handleSubmit} className="scan-form">
+          <div className="radio-group">
+            <label className={`radio-label ${hasGaps === 'yes' ? 'selected' : ''}`}>
+              <input 
+                type="radio" 
+                name="teeth-gaps" 
+                value="yes" 
+                checked={hasGaps === 'yes'} 
+                onChange={() => setHasGaps('yes')} 
+              />
+              <span className="radio-circle"></span>
+              <span className="radio-text">Yes</span>
+            </label>
+            
+            <label className={`radio-label ${hasGaps === 'no' ? 'selected' : ''}`}>
+              <input 
+                type="radio" 
+                name="teeth-gaps" 
+                value="no" 
+                checked={hasGaps === 'no'} 
+                onChange={() => setHasGaps('no')} 
+              />
+              <span className="radio-circle"></span>
+              <span className="radio-text">No</span>
+            </label>
+          </div>
+
+          <div className="inputs-row">
+            <div className="input-wrapper">
+              <Input 
+                label="Full Name" 
+                required
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+              />
+            </div>
+            
+            <div className="input-wrapper">
+              <Input 
+                label="Mobile number" 
+                required
+                value={mobileNumber}
+                onChange={(e) => setMobileNumber(e.target.value)}
+                startAdornment={<span className="phone-prefix">+91</span>}
+                placeholder="Mobile number"
+              />
+            </div>
+
+            <button type="submit" className="submit-scan-btn">
+              Book a Free Scan
+            </button>
+          </div>
+
+          <div className="consent-row">
+            <label className="checkbox-container">
+              <input 
+                type="checkbox" 
+                checked={consent} 
+                onChange={(e) => setConsent(e.target.checked)} 
+              />
+              <span className="checkmark"></span>
+              <span className="consent-text">
+                I hereby consent to receive calls / messages from Whistle and its partners and override DND settings.
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </section>
+  );
+};
+
+export default BookScanForm;
